@@ -1,6 +1,5 @@
 package io.github.robwin.service;
 
-
 import io.vavr.control.Try;
 
 public interface BusinessService {

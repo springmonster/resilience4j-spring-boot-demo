@@ -12,22 +12,22 @@ public class BackendBController {
 
     private final BusinessService businessBService;
 
-    public BackendBController(@Qualifier("businessBService")BusinessService businessBService){
+    public BackendBController(@Qualifier("businessBService") BusinessService businessBService) {
         this.businessBService = businessBService;
     }
 
     @GetMapping("failure")
-    public String backendBFailure(){
+    public String backendBFailure() {
         return businessBService.failure();
     }
 
     @GetMapping("success")
-    public String backendBSuccess(){
+    public String backendBSuccess() {
         return businessBService.success();
     }
 
     @GetMapping("ignore")
-    public String ignore(){
+    public String ignore() {
         return businessBService.ignore();
     }
 }

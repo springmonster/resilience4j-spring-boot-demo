@@ -10,7 +10,7 @@ public class BusinessAService implements BusinessService {
 
     private final Connector backendAConnector;
 
-    public BusinessAService(@Qualifier("backendAConnector") Connector backendAConnector){
+    public BusinessAService(@Qualifier("backendAConnector") Connector backendAConnector) {
         this.backendAConnector = backendAConnector;
     }
 

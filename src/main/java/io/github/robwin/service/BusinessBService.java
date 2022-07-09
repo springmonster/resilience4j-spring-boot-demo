@@ -1,6 +1,5 @@
 package io.github.robwin.service;
 
-
 import io.github.resilience4j.circuitbreaker.CircuitBreaker;
 import io.github.resilience4j.circuitbreaker.CircuitBreakerRegistry;
 import io.github.resilience4j.circuitbreaker.operator.CircuitBreakerOperator;
@@ -14,13 +13,13 @@ import java.util.concurrent.TimeUnit;
 import java.util.function.Supplier;
 
 @Service(value = "businessBService")
-public class BusinessBService implements BusinessService  {
+public class BusinessBService implements BusinessService {
 
     private final Connector backendBConnector;
     private final CircuitBreakerRegistry circuitBreakerRegistry;
 
     public BusinessBService(@Qualifier("backendBConnector") Connector backendBConnector,
-                            CircuitBreakerRegistry circuitBreakerRegistry){
+                            CircuitBreakerRegistry circuitBreakerRegistry) {
         this.backendBConnector = backendBConnector;
         this.circuitBreakerRegistry = circuitBreakerRegistry;
 
